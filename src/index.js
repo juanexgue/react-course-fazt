@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { UserCard } from './user'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Greeting() {
+    const name = 'Juanex'
+    return <h1>Hello world {name}</h1>
+}
+
+root.render(<>
+    <UserCard
+        name="Juan Guevara"
+        amount={3000}
+        married={true}
+        points={[99, 33.3, 22.2]}
+        address={{ street: "123 Main Street", city: "New York" }}
+        greet={function () { alert('Hello') }}
+    />
+
+    <UserCard
+        name="Esmeralda Guevara"
+        amount={1000}
+        married={false}
+        points={[99, 33.3, 22.2]}
+        address={{ street: "123 Main Street", city: "New York" }}
+        greet={function () { alert('Hello') }}
+    />
+</>
+)
