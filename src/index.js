@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { UserCard } from './user'
 import { Button } from './Button'
+import { TaskCard } from './Task'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -11,6 +12,8 @@ function Greeting() {
 }
 
 root.render(<>
+
+    <TaskCard ready={false} />
 
     <Button text='Click me' />
     <Button text='Pay' />
