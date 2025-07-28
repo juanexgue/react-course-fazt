@@ -30,7 +30,7 @@ const users = [
 root.render(<>
 
     <Counter />
-
+    <hr />
     {users.map((user, i) => {
         return (
             <div key={i}>

@@ -1,7 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export const Counter = () => {
     const [counter, setCounter] = useState(0)
+
+    useEffect(() => {
+        console.log('render')
+    }, [counter])
 
     return (
         <div>
@@ -17,7 +21,7 @@ export const Counter = () => {
                 Restar
             </button>
             <button onClick={() => {
-                setCounter(1000)
+                setCounter(0)
             }} >
                 Reiniciar
             </button>
