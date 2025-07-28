@@ -4,6 +4,7 @@ import { UserCard } from './user'
 import { Button } from './Button'
 import { TaskCard } from './Task'
 import { Posts } from './Posts'
+import { Counter } from './Counter'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -27,6 +28,8 @@ const users = [
 
 
 root.render(<>
+
+    <Counter />
 
     {users.map((user, i) => {
         return (
