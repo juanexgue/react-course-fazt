@@ -13,6 +13,23 @@ function Greeting() {
 
 root.render(<>
 
+    <button onClick={(e) => {
+        console.log('Diste click');
+
+    }}>Click me</button>
+
+    <input onChange={(e) => {
+        console.log(e.target.value)
+    }}></input>
+
+    <form onSubmit={(e) => {
+        e.preventDefault()
+        console.log("Se enviaron los datos")
+    }}>
+        <h1>Registro de usuario</h1>
+        <button>Send</button>
+    </form>
+
     <TaskCard ready={false} />
 
     <Button text='Click me' />
