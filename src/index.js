@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { UserCard } from './user'
 import { Button } from './Button'
 import { TaskCard } from './Task'
+import { Posts } from './Posts'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -12,6 +13,8 @@ function Greeting() {
 }
 
 root.render(<>
+
+    <Posts />
 
     <button onClick={(e) => {
         console.log('Diste click');
