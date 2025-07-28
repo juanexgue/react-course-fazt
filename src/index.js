@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { UserCard } from './user'
+import { Button } from './Button'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -10,6 +11,10 @@ function Greeting() {
 }
 
 root.render(<>
+
+    <Button text='Click me' />
+    <Button text='Pay' />
+    <Button text='Go to' name='Juanex' />
     <UserCard
         name="Juan Guevara"
         amount={3000}
